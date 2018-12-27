@@ -1,0 +1,18 @@
+<!-- Launches ros_tools_package, rviz node and load param "year", including usb_cam-test.launch file-->
+<launch>
+  <include file="$(find ros_tools_package)/launch/usb_cam-test.launch"/>
+
+  <!-- namespace = masteruvic -->
+  <group ns="masteruvic">
+    <rosparam command="load" file="$(find ros_tools_package)/exercici3_param/parametres.yaml" />
+  </group>
+
+  <!-- Run rviz node -->
+	<node
+		pkg="rviz"
+		type="rviz"
+		name="rviz"
+		args="-d $(find ros_tools_package)/rviz/ros_tools_package_rviz_file.rviz">
+	</node>
+
+</launch>
