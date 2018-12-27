@@ -12,4 +12,5 @@
 5.- Including the file **usb_cam-test.launch** from the package **usb_cam**
 
 6.- What are the arguments of **usb_cam-test.launch**?
+    
     >There are no arguments.
